@@ -1,0 +1,1 @@
+La page index_connexion.html est la page d'accueil à ouvrir en premier pour avoir accès à la page de connexion et ensuite la page d'accueil complète.

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Inscription Chauffeur</title>
+        <link rel="stylesheet" type="text/css" href="css/formulaireC.css" />
+    </head>
+<body>
+    <header>
+        <div class="contenu_header">
+            <div class="logo">
+                <a href="https://www.capcomfrance.fr/"><img src="img/capcom.png" alt="Logo Capcom"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="administration.html">Administration</a></li>
+                    <li><a href="compte.html">Compte</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="form-container">
+            <h2>Devenez Chauffeur !</h2>
+            <p>Remplissez ce formulaire pour proposer vos trajets à la communauté.</p>
+
+            <form action="compte.html" method="get">
+                <fieldset>
+                    <legend>Informations Personnelles</legend>
+                    
+                    <label for="nom">Nom :</label>
+                    <input type="text" id="nom" name="nom" placeholder="Votre nom"
+                    oninvalid="this.setCustomValidity('Veuillez entrer votre nom.')" 
+                    oninput="this.setCustomValidity('')" 
+                    required title="Veuillez entrer votre nom.">
+                    <ul></ul>
+
+                    <label for="prenom">Prénom :</label>
+                    <input type="text" id="prenom" name="prenom" placeholder="Votre prénom"
+                    oninvalid="this.setCustomValidity('Veuillez entrer votre prénom.')" 
+                    oninput="this.setCustomValidity('')" 
+                    required title="Veuillez entrer votre prénom.">
+                    <ul></ul>
+
+                    <label for="email">Email :</label>
+                    <input type="email" id="email" name="email" placeholder="email@exemple.com"
+                    oninvalid="this.setCustomValidity('Veuillez entrer un email valide.')" 
+                    oninput="this.setCustomValidity('')" 
+                    required title="Veuillez entrer votre email.">
+                    <ul></ul>
+
+                    <label for="telephone">Téléphone :</label>
+                    <input type="tel" id="telephone" name="telephone" pattern="[0-9]{10}" maxlength="10" placeholder="06 xx xx xx xx"
+                    oninvalid="this.setCustomValidity('Veuillez entrer un numéro de téléphone valide.')" 
+                    oninput="this.setCustomValidity('')" 
+                    required title="Veuillez entrer votre numéro de téléphone.">
+                    <ul></ul>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Votre Véhicule</legend>
+                    <div class="vehicle-section">
+                        <div class="vehicle-image">
+                            <img src="img/voiture-bleu.png" alt="Voiture pixel art">
+                        </div>
+                        <div class="vehicle-inputs">
+                            <label for="modele">Modèle de voiture :</label>
+                            <input type="text" id="modele" name="modele" placeholder="Ex: Berline, Coupé..."
+                            oninvalid="this.setCustomValidity('Veuillez entrer votre modèle de voiture.')" 
+                            oninput="this.setCustomValidity('')" 
+                            required title="Veuillez entrer votre modèle de voiture.">
+                            <ul></ul>
+
+                            <label for="plaque">Plaque d'immatriculation :</label>
+                            <input type="text" id="plaque" name="plaque" placeholder="AA-123-BB" pattern="^[A-Z0-9]{2}-[A-Z0-9]{3}-[A-Z0-9]{2}$"
+                            oninvalid="this.setCustomValidity('Veuillez entrer votre plaque d\'immatriculation.')" 
+                            oninput="this.setCustomValidity('')" 
+                            required title="Veuillez entrer votre plaque d'immatriculation.">
+                            <ul></ul>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Informations sur le Trajet</legend>
+                    
+                    <label for="depart">Lieu de départ :</label>
+                    <input type="text" id="depart" name="depart" placeholder="Ville de départ"
+                    oninvalid="this.setCustomValidity('Veuillez entrer une ville.')" 
+                    oninput="this.setCustomValidity('')" 
+                    required title="Veuillez entrer une ville.">
+                    <ul></ul>
+
+                    <label for="arrivee">Lieu d'arrivée :</label>
+                    <input type="text" id="arrivee" name="arrivee" placeholder="Ville d'arrivée"
+                    oninvalid="this.setCustomValidity('Veuillez entrer une ville.')" 
+                    oninput="this.setCustomValidity('')" 
+                    required title="Veuillez entrer une ville.">
+                    <ul></ul>
+
+                    <label for="date_depart">Date de départ :</label>
+                    <input type="date" id="date_depart" name="date_depart" min="2025-01-01" max="2100-01-01"
+                    oninvalid="this.setCustomValidity('Veuillez entrer une date valide.')" 
+                    oninput="this.setCustomValidity('')" 
+                    required title="Veuillez entrer une date.">
+                    <ul></ul>
+
+                    <label for="horaire">Horaire de départ :</label>
+                    <input type="time" id="horaire" name="horaire"
+                    oninvalid="this.setCustomValidity('Veuillez entrer un horaire.')" 
+                    oninput="this.setCustomValidity('')" 
+                    required title="Veuillez entrer un horaire.">
+                    <ul></ul>
+
+                    <label for="places_disponibles">Nombre de places disponibles :</label>
+                    <input type="number" id="places_disponibles" name="places_disponibles" min="1" max="8"
+                    oninvalid="this.setCustomValidity('Veuillez entrer le nombres de places disponibles.')" 
+                    oninput="this.setCustomValidity('')" 
+                    required title="Veuillez entrer le nombres de places disponibles.">
+                    <ul></ul>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Conditions de Voyage</legend>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="non_fumeur" name="non_fumeur" />
+                        <label for="non_fumeur">Mon véhicule est non-fumeur</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="animaux" name="animaux" />
+                        <label for="animaux">J'accepte les animaux</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="bagages" name="bagages" />
+                        <label for="bagages">J'accepte les gros bagages</label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Commentaires</legend>
+                    <label for="commentaire">Ajouter des détails (facultatif) :</label>
+                    <textarea name="commentaire" id="commentaire" placeholder="Ex: Musique autorisée, petit détour possible..." rows="4"></textarea>
+                    <ul></ul>
+                </fieldset>
+
+                <div class="form-buttons">
+                    <input type="reset" value="Effacer" />
+                    <input type="submit" value="Proposer mon trajet" />
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Capcom | <a href="https://www.capcomfrance.fr/">Site Officiel</a> | Suivez-nous sur : 
+            <a href="https://x.com/capcom_france/">Twitter</a> | 
+            <a href="https://www.facebook.com/CapcomFrance/">Facebook</a> | 
+            <a href="https://www.instagram.com/Capcomfr/?hl=fr">Instagram</a>
+        </p>
+    </footer>
+</body>
+</html>

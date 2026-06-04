@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Page contact</title>
+        <link rel="stylesheet" href="css/administration.css">
+    </head>
+<body>
+    <header>
+        <div class="contenu_header">
+            <div class="logo">
+                <a href="https://www.capcomfrance.fr/"><img src="img/capcom.png" alt="Logo Capcom"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="administration.html">Administration</a></li>
+                    <li><a href="compte.html">Compte</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="formulaire-container">
+            <h2>Administration</h2>
+            
+            <form action="index.html" method="get">
+                <fieldset>
+                    <legend>Informations Personnelles</legend>
+                    
+                    <label for="nom">Nom</label>
+                    <input type="text" id="nom" name="nom" placeholder="Votre nom"
+                    oninvalid="this.setCustomValidity('Veuillez entrer votre nom.')" 
+                    oninput="this.setCustomValidity('')" 
+                    required title="Veuillez entrer votre nom.">
+                    <ul></ul>
+
+                    <label for="prenom">Prénom</label>
+                    <input type="text" id="prenom" name="prenom" placeholder="Votre prénom"
+                    oninvalid="this.setCustomValidity('Veuillez entrer votre prénom.')" 
+                    oninput="this.setCustomValidity('')" 
+                    required title="Veuillez entrer votre prénom.">
+                    <ul></ul>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="email@exemple.com"
+                    oninvalid="this.setCustomValidity('Veuillez entrer un email valide.')" 
+                    oninput="this.setCustomValidity('')" 
+                    required title="Veuillez entrer votre email.">
+                    <ul></ul>
+
+                    <label for="telephone">Téléphone</label>
+                    <input type="tel" id="telephone" name="telephone" pattern="[0-9]{10}" maxlength="10" placeholder="06 xx xx xx xx"
+                    oninvalid="this.setCustomValidity('Veuillez entrer un numéro de téléphone valide.')" 
+                    oninput="this.setCustomValidity('')" 
+                    required title="Veuillez entrer votre numéro de téléphone.">
+                    <ul></ul>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Message</legend>
+                    
+                    <textarea id="message" name="message" rows="5" cols="30" placeholder="Entrer ici le message à l'administration"
+                    oninvalid="this.setCustomValidity('Veuillez entrer un message.')" 
+                    oninput="this.setCustomValidity('')" 
+                    required title="Veuillez entrer un message.">
+                    </textarea>
+                    <ul></ul>
+
+                </fieldset>
+
+                <div class="formulaire-buttons">
+                    <input type="reset" value="Effacer">
+                    <input type="submit" value="Envoyer">
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Capcom | <a href="https://www.capcomfrance.fr/">Site Officiel</a> | Suivez-nous sur : 
+            <a href="https://x.com/capcom_france/">Twitter</a> | 
+            <a href="https://www.facebook.com/CapcomFrance/">Facebook</a> | 
+            <a href="https://www.instagram.com/Capcomfr/?hl=fr">Instagram</a>
+        </p>
+    </footer>
+</body>
+</html>
